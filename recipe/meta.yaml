@@ -1,5 +1,5 @@
 {% set name = "pympipool" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pympipool-{{ version }}.tar.gz
-  sha256: b14bd7d688d8bfac07918a38f9656e5fa465971575a5756f92c014688decb3de
+  sha256: 884fbc9e88b62f22a5ab5684e1afa30f5e1c85ebc8a43fbc77f5130ac8f93fe4
 
 build:
-  entry_points:
-    - pympipool=pympipool.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -25,7 +23,7 @@ requirements:
     - mpi4py >=3.1.4
     - python >=3.6
     - tqdm >=4.65.0
-    - pyzmq >=25.0.2
+    - pyzmq >=25.1.0
 
 test:
   imports:
