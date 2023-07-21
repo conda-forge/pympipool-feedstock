@@ -1,5 +1,5 @@
 {% set name = "pympipool" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pympipool-{{ version }}.tar.gz
-  sha256: ab0ead27553c5e52f320a23eaea76c4f71693bb4d1e04027af02b3a717aa133e
+  sha256: c82696c4c64f297a7807da8fbd45bbcfd29e7ffd68e284fea4ed6053255342d8
 
 build:
   noarch: python
