@@ -7,7 +7,7 @@ Home: https://github.com/jan-janssen/pympipool
 
 Package license: BSD-3-Clause
 
-Summary: pympipool - scale functions over multiple compute nodes using mpi4py
+Summary: pympipool - scale python functions over multiple compute nodes
 
 Current build status
 ====================
@@ -144,4 +144,8 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@niklassiemer](https://github.com/niklassiemer/)
+* [@pmrv](https://github.com/pmrv/)
+* [@pyiron-runner](https://github.com/pyiron-runner/)
+* [@srmnitc](https://github.com/srmnitc/)
 
