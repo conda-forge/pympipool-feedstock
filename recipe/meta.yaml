@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pympipool-{{ version }}.tar.gz
   sha256: 18c1ab2e288cad19dfe6ee49245f97e1da3fdc0c0ad6757007e9d549b58b6ed3
+  patches:
+    - setup.patch
 
 build:
   noarch: python
@@ -23,7 +25,7 @@ requirements:
     - mpi4py >=3.1.4
     - python >=3.6
     - tqdm >=4.66.1
-    - pyzmq >=25.1.1
+    - pyzmq >=24.0.1
 
 test:
   imports:
