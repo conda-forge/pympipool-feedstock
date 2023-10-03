@@ -14,8 +14,8 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 2
 
 requirements:
   host:
@@ -38,10 +38,14 @@ test:
 
 about:
   home: https://github.com/jan-janssen/pympipool
-  summary: pympipool - scale functions over multiple compute nodes using mpi4py
+  summary: pympipool - scale python functions over multiple compute nodes
   license: BSD-3-Clause
   license_file: LICENSE
 
 extra:
   recipe-maintainers:
+    - srmnitc
+    - pyiron-runner
     - jan-janssen
+    - pmrv
+    - niklassiemer
