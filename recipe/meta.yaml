@@ -10,6 +10,7 @@ source:
   sha256: 18c1ab2e288cad19dfe6ee49245f97e1da3fdc0c0ad6757007e9d549b58b6ed3
   patches:
     - setup.patch
+    - versioneer.patch
 
 build:
   noarch: python
