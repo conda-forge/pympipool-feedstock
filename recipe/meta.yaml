@@ -18,6 +18,12 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - cloudpickle
+    - mpi4py
+    - tqdm
+    - pyzmq
+    - versioneer
+    - toml
   run:
     - cloudpickle >=2.0.0,<=3.0.0
     - mpi4py >=3.1.4,<=3.1.5
