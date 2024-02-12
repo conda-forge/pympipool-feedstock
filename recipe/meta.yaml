@@ -1,5 +1,5 @@
 {% set name = "pympipool" %}
-{% set version = "0.7.11" %}
+{% set version = "0.7.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pympipool-{{ version }}.tar.gz
-  sha256: f9b5315cec93795da5b18b9badf07ad4ec338630a5c80479a9429cc0a3305ab9
+  sha256: 2e89121a233af430493d0f15795027515427a071374f2271730402a6a7497fc7
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - cloudpickle >=2.0.0,<=3.0.0
     - mpi4py >=3.1.4,<=3.1.5
     - python >=3.6
-    - tqdm >=4.44.0,<=4.66.1
+    - tqdm >=4.44.0,<=4.66.2
     - pyzmq >=25.0.0,<=25.1.2
 
 test:
