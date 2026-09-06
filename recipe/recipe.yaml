@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: pympipool
+  version: "0.9.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pympipool-${{ version }}.tar.gz
+  sha256: 81702d3a3c81a35278a955e6188645b20ed8b4618ab7d07d7b15ca1b3207e138
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - executorlib <0.1
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - pympipool
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: pympipool - scale python functions over multiple compute nodes
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/jan-janssen/pympipool
+
+extra:
+  recipe-maintainers:
+    - srmnitc
+    - pyiron-runner
+    - jan-janssen
+    - pmrv
